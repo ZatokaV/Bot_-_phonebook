@@ -10,3 +10,5 @@ Remember birthday for contacts
 Search contacts by fragment of name or phone number
 
 To save contacts correctly, you need to stop the program only using the built-in commands
+
+File to start "bot.py"
