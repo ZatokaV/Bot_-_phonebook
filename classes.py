@@ -26,9 +26,9 @@ class Name(Field):
 
 class Phone(Field):
 
-    def __init__(self, user_message):
-        self._value = None
-        self.value = user_message.split(' ')[2:]
+    def __init__(self, value):
+        super().__init__(value)
+        self.value = value
 
     @Field.value.setter
     def value(self, value):
