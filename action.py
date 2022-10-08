@@ -9,7 +9,7 @@ def hello_message():
 @input_error
 def add_persone(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
     phone = Phone(user_message)
     record = Record(name, phone)
 
@@ -28,7 +28,7 @@ def add_persone(user_message):
 @input_error
 def change_phone(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
     phone = Phone(user_message)
     record = Record(name, phone)
 
@@ -47,7 +47,7 @@ def change_phone(user_message):
 @input_error
 def append_phone(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
     phone = Phone(user_message)
     record = Record(name, phone)
 
@@ -67,7 +67,7 @@ def append_phone(user_message):
 @input_error
 def show_phone(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
 
     if len(user_message.split(' ')) != 2:
         print('when searching for a number, use the template "phone" "name"')
@@ -85,7 +85,7 @@ def show_phone(user_message):
 @input_error
 def delete_phone(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
 
     if len(user_message.split(' ')) != 2:
         print('when delete phone for contact, use the "pop name"')
