@@ -19,8 +19,9 @@ class Field:
 
 class Name(Field):
 
-    def __init__(self, user_message):
-        self.value = user_message.split(' ')[1]
+    def __init__(self, value):
+        super().__init__(value)
+        self.value = value
 
 
 class Phone(Field):
@@ -28,10 +29,6 @@ class Phone(Field):
     def __init__(self, user_message):
         self._value = None
         self.value = user_message.split(' ')[2:]
-
-    @property
-    def value(self):
-        return self.__value
 
     @Field.value.setter
     def value(self, value):
@@ -53,12 +50,8 @@ class Phone(Field):
 class Birthday(Field):
 
     def __init__(self, value):
-        self._value = None
+        super().__init__(value)
         self.value = value
-
-    @property
-    def value(self):
-        return self.__value
 
     @Field.value.setter
     def value(self, value):
