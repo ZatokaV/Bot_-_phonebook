@@ -7,7 +7,7 @@ from decorators import input_error
 @input_error
 def select_birthday_date(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
 
     if len(user_message.split(' ')) != 2:
         print('Error. Enter "birthday" "name"')
@@ -32,7 +32,7 @@ def select_birthday_date(user_message):
 @input_error
 def when_birthday(user_message):
 
-    name = Name(user_message)
+    name = Name(user_message.split(' ')[1])
 
     if len(user_message.split(' ')) != 2:
         print('when searching for a number, use the template "party" "name"')
