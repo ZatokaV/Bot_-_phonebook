@@ -10,7 +10,7 @@ def hello_message():
 def add_persone(user_message):
 
     name = Name(user_message.split(' ')[1])
-    phone = Phone(user_message)
+    phone = Phone(user_message.split(' ')[2:])
     record = Record(name, phone)
 
     if len(user_message.split(' ')) != 3:
@@ -29,7 +29,7 @@ def add_persone(user_message):
 def change_phone(user_message):
 
     name = Name(user_message.split(' ')[1])
-    phone = Phone(user_message)
+    phone = Phone(user_message.split(' ')[2:])
     record = Record(name, phone)
 
     if len(user_message.split(' ')) != 3:
@@ -48,7 +48,7 @@ def change_phone(user_message):
 def append_phone(user_message):
 
     name = Name(user_message.split(' ')[1])
-    phone = Phone(user_message)
+    phone = Phone(user_message.split(' ')[2:])
     record = Record(name, phone)
 
     if len(user_message.split(' ')) != 3:
